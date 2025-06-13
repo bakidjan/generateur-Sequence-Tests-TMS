@@ -82,7 +82,7 @@ df_librairieTcl = pd.DataFrame(np.array(listProcedureName).T, columns = ['proced
 out = procedureExcel[["Action ","Parametre", "Nouvellevaleur"]].apply(lambda val: outputfunction(val, df_librairieTcl),axis = 1)
 
 
-#Drop the rows where at least one element is missing.
+#Drop the rows where at list one element is missing.
 #Keep the DataFrame with valid entries in the same variable.
 #print(out)
 out.dropna(inplace = True)
